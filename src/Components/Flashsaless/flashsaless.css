@@ -1,0 +1,102 @@
+/* Main container to hold the banner and product info box */
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Styling for the vertical navigation menu */
+.vertical-nav {
+  width: 200px;
+  background-color: #f8f8f8;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.vertical-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vertical-nav li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Submenu icon styling */
+.submenu-icon {
+  margin-left: 10px;
+}
+
+/* Submenu items hidden by default */
+.submenu {
+  display: none;
+  transform: translateY(0); /* Animate to its original position */
+}
+
+.submenu li {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+/* Show submenu when open */
+.vertical-nav li.open > .submenu {
+  display: block;
+  opacity: 1; /* Make submenu visible */
+  transform: translateY(0); /* Animate to its original position */
+  margin-left: 200%;
+  width: 300px;
+}
+
+/* Product info box */
+.product-info-box {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+}
+
+/* Sorting button styling */
+.sorting-button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Sorting dropdown styling */
+.sorting-options {
+  margin-top: 10px;
+}
+
+.sorting-options select {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+/* Pop-out effect for the banner */
+.banner-container {
+  animation: popOutAnimation 0.5s ease-in-out;
+}
+
+.pop-out {
+  animation: popOutAnimation 0.5s ease-in-out forwards;
+}
+
+@keyframes popOutAnimation {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
