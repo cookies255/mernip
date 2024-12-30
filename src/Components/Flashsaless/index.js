@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import fsbanner from '../../assets/images/fsbanner.jpg'; // Replace with your image path
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import Lotus from '../Lotus'; // Import Lotus component
 import './flashsaless.css'; // Ensure you have this CSS file for styling
 
 const Flashsaless = () => {
@@ -26,7 +27,7 @@ const Flashsaless = () => {
         <img src={fsbanner} alt="Banner" className="banner-img" />
       </div>
 
-      {/* Main Container (Navbar + Product Info Box) */}
+      {/* Main Container (Navbar + Product Info Section) */}
       <div className="main-container">
         {/* Vertical Navbar */}
         <nav className="vertical-nav">
@@ -125,13 +126,10 @@ const Flashsaless = () => {
           </ul>
         </nav>
 
-        {/* Product Info Box (Right side of the Navbar) */}
-        <div className="product-info-box">
-          <button className="sorting-button">
-            159 Products
-          </button>
+        {/* Product Info Section (Right of Navbar) */}
+        <div className="product-info-section">
+          <span className="product-count">159 Products</span>
           <div className="sorting-options">
-            <label htmlFor="sort-option">Sort By:</label>
             <select
               id="sort-option"
               value={sortOption}
@@ -143,9 +141,11 @@ const Flashsaless = () => {
               <option value="rating">Rating</option>
             </select>
           </div>
+          {/* Add the Lotus Component */}
         </div>
       </div>
     </div>
+    
   );
 };
 

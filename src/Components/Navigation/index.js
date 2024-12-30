@@ -56,7 +56,7 @@ const Navbar = () => {
             </div>
           </li>
           <li className="list-inline-item">
-            <Link to="/contact">Lotus</Link>
+            <Link to="/Lotus">Lotus</Link>
             <span className="new-text">
               <sup>New</sup>
             </span>
