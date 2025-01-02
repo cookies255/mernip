@@ -141,6 +141,7 @@ const Flashsaless = () => {
               <option value="rating">Rating</option>
             </select>
           </div>
+          <Lotus/>
           {/* Add the Lotus Component */}
         </div>
       </div>
